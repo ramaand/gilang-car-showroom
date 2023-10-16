@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
     "axios": "^1.5.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
@@ -19,14 +20,17 @@
     "react-countup": "^6.4.2",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
+    "react-responsive": "^9.0.2",
     "react-scroll": "^1.9.0",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zustand": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-scroll": "^1.8.8",
     "autoprefixer": "^10",
     "postcss": "^8",
     "tailwindcss": "^3",
