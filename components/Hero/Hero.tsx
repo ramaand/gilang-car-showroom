@@ -1,5 +1,9 @@
 'use client'
 
+import { fadeIn } from '@/variants'
+import { m } from 'framer-motion'
+import { easeInOut } from 'framer-motion/dom'
+
 import useSearch from '@/hooks/useSearch'
 
 import Search from '@/components/Search'
@@ -13,12 +17,24 @@ const Hero = () => {
     <section className="h-screen md:h-[90vh] bg-[#b2b7c2]/10" id="home">
       <Content />
       {isActive ? (
-        <div className="fixed top-[64px] z-10 w-full max-w-[1920px]">
+        <m.div
+          initial={{ y: '-100%' }}
+          animate={{ y: 0 }}
+          transition={{ ease: easeInOut }}
+          className="fixed top-[64px] z-10 w-full max-w-[1920px]"
+        >
           <Search />
-        </div>
+        </m.div>
       ) : (
         <div className="-mt-12 w-full max-w-[1300px] mx-auto">
-          <Search />
+          <m.div
+            variants={fadeIn('up', 0.8)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+          >
+            <Search />
+          </m.div>
         </div>
       )}
     </section>

@@ -18,7 +18,7 @@ const Header = () => {
   })
 
   useEffect(() => {
-    if (scrollPosition > 675) {
+    if (scrollPosition > 750) {
       onActive()
     } else {
       onDeactive()
