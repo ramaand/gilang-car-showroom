@@ -9,9 +9,9 @@ const ToggleMenu = () => {
   return (
     <div onClick={onToggle} className="cursor-pointer md:hidden">
       {isOpen ? (
-        <BiX className="text-4xl" />
+        <BiX className="text-2xl" />
       ) : (
-        <RxHamburgerMenu className="text-4xl" />
+        <RxHamburgerMenu className="text-2xl" />
       )}
     </div>
   )
