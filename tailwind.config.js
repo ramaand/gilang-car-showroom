@@ -19,6 +19,9 @@ module.exports = {
       backgroundColor: {
         'skeleton': '#e9e9e9',
       },
+      backgroundImage: {
+        'pattern': "url('/assets/images/pattern.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
