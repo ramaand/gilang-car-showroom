@@ -81,7 +81,7 @@ const Search = () => {
     >
       <div className="md:h-full flex items-center px-6 md:px-0">
         <form
-          className="md:h-full w-full flex items-center px-6 gap-4"
+          className="md:h-full w-full flex items-center px-6 gap-2 xl:gap-4"
           onSubmit={handleSearch}
         >
           <Manufacture onValueChange={(e) => setMake(e)} />

@@ -27,7 +27,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
 }) => {
   return (
     <Select onValueChange={(e) => onValueChange(e)}>
-      <SelectTrigger className="pl-12 w-[180px] outline-none border-none focus:outline-none focus:ring-0 ring-0 ring-offset-0 focus:ring-offset-0">
+      <SelectTrigger className="pl-2 xl:pl-12 w-auto lg:w-[180px] outline-none border-none focus:outline-none focus:ring-0 ring-0 ring-offset-0 focus:ring-offset-0">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent className="outline-none border-none focus:outline-none focus:ring-0 ring-0  ring-offset-0 focus:ring-offset-0">
