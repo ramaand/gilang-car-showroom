@@ -16,7 +16,7 @@ const Footer = () => {
           variants={fadeIn('up', 0.2)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.6 }}
           className="flex flex-col md:flex-row md:justify-between gap-x-5 gap-y-14"
         >
           <div className="flex flex-col flex-1 gap-y-8">
