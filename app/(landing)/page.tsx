@@ -1,3 +1,4 @@
+import BackToTop from '@/components/BackToTop'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero/Hero'
 import About from '@/components/Section/About'
@@ -12,6 +13,7 @@ export default async function Home() {
       <Cars />
       <About />
       <Footer />
+      <BackToTop />
     </main>
   )
 }
