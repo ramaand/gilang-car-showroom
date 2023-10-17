@@ -9,6 +9,7 @@ import { HEADERS, RAPID_API_URL } from '@/constant'
 
 import CarCard from '@/components/Car/CarCard'
 import CarEmpty from '@/components/Car/CarEmpty'
+import CarModal from '@/components/Modals/CarModal'
 import RenderIf from '@/components/RenderIf'
 import CarSkeleton from '@/components/Skeletons/CarSkeleton'
 
@@ -54,6 +55,7 @@ const Cars = () => {
           </div>
         )}
       </div>
+      <CarModal />
     </section>
   )
 }
