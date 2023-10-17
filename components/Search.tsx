@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 
 import { useRouter, useSearchParams } from 'next/navigation'
 
@@ -12,6 +12,7 @@ import { LIMIT } from '@/constant'
 import useSearch from '@/hooks/useSearch'
 import { cn } from '@/lib/utils'
 
+import RenderIf from './RenderIf'
 import Fuel from './Searchs/Fuel'
 import Manufacture from './Searchs/Manufacture'
 import Model from './Searchs/Model'
@@ -26,6 +27,11 @@ const Search = () => {
   const [model, setModel] = useState('')
   const [year, setYear] = useState('')
   const [fuel, setFuel] = useState('')
+
+  const isParamsExist = useMemo(
+    () => Object.entries(queryString.parse(params.toString())).length,
+    [params]
+  )
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -90,15 +96,17 @@ const Search = () => {
           <Model onValueChange={(e) => setModel(e)} value={model} />
 
           <Button type="submit">Search</Button>
-          <Button
-            variant="destructive"
-            onClick={(e) => {
-              e.preventDefault()
-              router.push('/')
-            }}
-          >
-            Clear Filter
-          </Button>
+          <RenderIf isTrue={isParamsExist}>
+            <Button
+              variant="destructive"
+              onClick={(e) => {
+                e.preventDefault()
+                router.push('/')
+              }}
+            >
+              Clear Filter
+            </Button>
+          </RenderIf>
         </form>
       </div>
     </div>
