@@ -1,11 +1,22 @@
 'use client'
-import React, { useMemo } from 'react'
+import React, {
+  useEffect,
+  useMemo,
+  useState,
+} from 'react'
+
+import { useSearchParams } from 'next/navigation'
 
 import { CarProps } from '@/types'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
+import queryString from 'query-string'
 
-import { HEADERS, RAPID_API_URL } from '@/constant'
+import {
+  HEADERS,
+  LIMIT,
+  RAPID_API_URL,
+} from '@/constant'
 
 import CarCard from '@/components/Car/CarCard'
 import CarEmpty from '@/components/Car/CarEmpty'
@@ -13,13 +24,26 @@ import CarModal from '@/components/Modals/CarModal'
 import RenderIf from '@/components/RenderIf'
 import CarSkeleton from '@/components/Skeletons/CarSkeleton'
 
+const defaultFilter = { model: '', year: '2022', limit: LIMIT, fuel_type: '' }
+
 const Cars = () => {
+  const params = useSearchParams()
+
+  const isParamsExist = useMemo(
+    () => Object.entries(queryString.parse(params.toString())).length,
+    [params]
+  )
+
   const { data, isLoading, isError, refetch } = useQuery({
     queryKey: ['cars'],
     queryFn: async () => {
+      const newParams = isParamsExist
+        ? queryString.parse(params.toString())
+        : defaultFilter
+
       const { data } = await axios.get(RAPID_API_URL, {
         headers: HEADERS,
-        params: { model: 'corolla' },
+        params: newParams,
       })
       return data
     },
@@ -31,6 +55,10 @@ const Cars = () => {
     () => Array.isArray(data) && !data.length && !isLoading && !isError,
     [data, isLoading, isError]
   )
+
+  useEffect(() => {
+    if (isParamsExist) refetch()
+  }, [isParamsExist])
 
   return (
     <section
