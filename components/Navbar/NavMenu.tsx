@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button'
 import useNavMobile from '@/hooks/useNavMobile'
 import { cn } from '@/lib/utils'
 
+import SearchMobile from '@/components/SearchMobile'
+
 import MenuItem from './MenuItem'
 
 interface NavMenuProps {
@@ -40,7 +42,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ desktopMode }) => {
       >
         <Button className="font-light uppercase">See all cars</Button>
       </Link>
-      {/* <SearchMobile /> */}
+      <SearchMobile />
     </nav>
   )
 }
