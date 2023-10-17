@@ -1,36 +1,77 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Gilang Car Showroom
 
-First, run the development server:
+Find your best car here
+
+## Authors
+
+- Gilang Ramadhan [@ramaand](https://www.github.com/ramaand) [@portofolio](https://gilstuffs.xyz)
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`NEXT_PUBLIC_RAPID_API_URL`
+
+`NEXT_PUBLIC_RAPID_API_KEY`
+
+`NEXT_PUBLIC_RAPID_API_HOST`
+
+That you can get on 
+
+Cars by API-Ninjas example [link](https://rapidapi.com/apininjas/api/cars-by-api-ninjas)
+
+And the documentation in [API Ninjas Documentation](https://api-ninjas.com/api/cars)
+
+
+
+
+## Before Run
+- Make sure you have the .env variables
+- Make sure your node version is > 14
+## Demo
+
+Check the demo on Vercel here [Gilang Car Showroom](https://gilang-car-showroom.vercel.app/)
+
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/ramaand/gilang-car-showroom.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd gilang-car-showroom
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Install dependencies
 
-## Learn More
+```bash
+  npm install
+  # or
+  yarn install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  npm run dev
+  # or
+  yarn dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Roadmap
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Implement Image generator for car using [CarsXE API](https://api.carsxe.com/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Tech Stack
+
+Next.JS 13 + TailwindCSS + Shadcn
