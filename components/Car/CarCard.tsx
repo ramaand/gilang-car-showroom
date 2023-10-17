@@ -8,6 +8,8 @@ import { GiCarWheel, GiSteeringWheel } from 'react-icons/gi'
 
 import { Button } from '@/components/ui/button'
 
+import useCarModal from '@/hooks/useCarModal'
+
 interface CarCardProps {
   car: CarProps
 }
@@ -26,6 +28,12 @@ const CarCard: React.FC<CarCardProps> = ({ car }) => {
     transmission,
     year,
   } = car
+  const carModal = useCarModal()
+
+  const handleOpenModal = () => {
+    carModal.data = car
+    carModal.onOpen()
+  }
 
   return (
     <div className="flex flex-col p-6 justify-center items-start text-black-100 bg-blue-100 hover:bg-white hover:shadow-md rounded-3xl group">
@@ -64,9 +72,12 @@ const CarCard: React.FC<CarCardProps> = ({ car }) => {
         </div>
 
         <div className="hidden group-hover:flex absolute bottom-0 w-full z-10">
-          <Button className="w-full py-4 rounded-full bg-blue-600 hover:bg-blue-700">
-            <div className='flex flex-row items-center justify-center w-full'>
-              <div className='w-full text-center'>View More</div>
+          <Button
+            onClick={handleOpenModal}
+            className="w-full py-4 rounded-full bg-blue-600 hover:bg-blue-700"
+          >
+            <div className="flex flex-row items-center justify-center w-full">
+              <div className="w-full text-center">View More</div>
               <BsArrowRightCircle size={24} />
             </div>
           </Button>
