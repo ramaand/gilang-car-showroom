@@ -11,7 +11,7 @@ const Content = () => {
   return (
     <div className="container mx-auto h-full md:pt-10">
       <div className="flex flex-col md:flex-row justify-center items-center md:justify-start h-full">
-        <div className="text-center md:max-w-xl md:text-left mt-16 md:mt-0 select-none">
+        <div className="text-center md:max-w-xl md:text-left mt-20 md:mt-0 select-none">
           <m.h1
             variants={fadeIn('down', 0.2)}
             initial="hidden"
