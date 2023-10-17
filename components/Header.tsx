@@ -1,17 +1,29 @@
 'use client'
+import { useEffect } from 'react'
+
 import { useMediaQuery } from 'react-responsive'
 
 import useScrollPosition from '@/hooks/useScrollPosition'
+import useSearch from '@/hooks/useSearch'
 import { cn } from '@/lib/utils'
 
 import Navbar from './Navbar/Navbar'
 
 const Header = () => {
   const scrollPosition = useScrollPosition()
+  const { onActive, onDeactive } = useSearch()
 
   const desktopMode = useMediaQuery({
     query: '(min-width: 1300px)',
   })
+
+  useEffect(() => {
+    if (scrollPosition > 675) {
+      onActive()
+    } else {
+      onDeactive()
+    }
+  }, [scrollPosition])
 
   return (
     <header
