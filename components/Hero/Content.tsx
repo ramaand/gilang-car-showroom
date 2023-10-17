@@ -16,7 +16,7 @@ const Content = () => {
             variants={fadeIn('down', 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.6 }}
+            viewport={{ once: true, amount: 0.6 }}
             className="h1"
           >
             Unleash Your Drive: Explore Our{' '}
@@ -26,7 +26,7 @@ const Content = () => {
             variants={fadeIn('down', 0.4)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.6 }}
+            viewport={{ once: true, amount: 0.6 }}
             className="description max-w-[550px] mx-auto md:mx-0 mb-6 md:mb-10"
           >
             Discover Automotive Excellence: Your Dream Ride Awaits at Gilang
@@ -36,7 +36,7 @@ const Content = () => {
             variants={fadeIn('down', 0.6)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.8 }}
+            viewport={{ once: true, amount: 0.8 }}
             className="flex gap-x-3 justify-center md:justify-start"
           >
             <Button className="h-14">
@@ -62,7 +62,7 @@ const Content = () => {
           variants={fadeIn('up', 0.6)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.6 }}
+          viewport={{ once: true, amount: 0.6 }}
           className="relative w-full h-full max-h-[50vh] md:max-w-[70vw] xl:max-w-[860px] xl:max-h-[542px] xl:absolute xl:-right-[50px] min-[1680px]:right-[120px] xl:top-48"
         >
           <Image

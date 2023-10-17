@@ -24,7 +24,7 @@ const About = () => {
             variants={fadeIn('up', 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.6 }}
+            viewport={{ once: true, amount: 0.6 }}
             className="flex-1 mb-8 md:mb-0"
           >
             <Image
@@ -42,7 +42,7 @@ const About = () => {
                 variants={fadeIn('up', 0.4)}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.6 }}
+                viewport={{ once: true, amount: 0.6 }}
                 className="h2"
               >
                 Car Services Simplified.
@@ -51,7 +51,7 @@ const About = () => {
                 variants={fadeIn('up', 0.6)}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.6 }}
+                viewport={{ once: true, amount: 0.6 }}
                 className="mb-8"
               >
                 We are passionate about bringing the finest automobiles to our
@@ -63,7 +63,7 @@ const About = () => {
                 variants={fadeIn('up', 0.8)}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="flex items-center gap-x-8 mb-12"
               >
                 <div className="flex flex-col w-[100px]">
