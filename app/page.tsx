@@ -3,7 +3,7 @@ import Hero from '@/components/Hero/Hero'
 import About from '@/components/Section/About'
 import Cars from '@/components/Section/Cars'
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="max-w-[1920px] bg-white mx-auto relative overflow-hidden">
       <Header />
