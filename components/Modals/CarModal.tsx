@@ -12,7 +12,7 @@ const CarModal = () => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onToggle}>
-      <DialogContent className="w-full md:min-w-[752px] lg:min-w-[1008px] xl:min-w-[1264px]">
+      <DialogContent className="w-full md:min-w-[512px] lg:min-w-[752px]">
         <div className="flex flex-1 flex-col gap-3">
           <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
             <Image
