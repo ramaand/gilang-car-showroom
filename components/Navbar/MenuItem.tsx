@@ -17,7 +17,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
     <Link
       className="cursor-pointer"
       to={to}
-      activeClass="text-accent"
+      activeClass="active-nav"
       smooth={desktopMode}
       spy
     >
