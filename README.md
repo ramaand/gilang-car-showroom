@@ -69,7 +69,8 @@ Start development
 
 ## Roadmap
 
-- Implement Image generator for car using [CarsXE API](https://api.carsxe.com/)
+- Implement Car Image generator using [CarsXE API](https://api.carsxe.com/)
+- Add more section like Why us, Testimonials, Brands
 
 
 ## Tech Stack
